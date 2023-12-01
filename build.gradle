@@ -244,12 +244,7 @@ task copyCasConfiguration(type: Copy, group: "CAS",
 
 springBoot {
     buildInfo()
-
-
-
-    mainClassName = "org.apereo.cas.CasConfigurationServerWebApplication"
-
-
+    mainClass = "org.apereo.cas.CasConfigurationServerWebApplication"
 }
 
 sourceSets {
@@ -298,8 +293,8 @@ bootWar {
         logger.info "WAR artifact is not marked as an executable"
     }
 
-    archiveName "casconfigserver.war"
-    baseName "casconfigserver"
+    archiveFileName = "casconfigserver.war"
+    archiveBaseName = "casconfigserver"
 
     entryCompression = ZipEntryCompression.STORED
 
